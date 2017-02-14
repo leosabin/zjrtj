@@ -2,6 +2,8 @@ package com.team980.thunderscout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.team980.thunderscout.feed.HomeFragment;
 import com.team980.thunderscout.info.ThisDeviceFragment;
@@ -18,6 +24,7 @@ import com.team980.thunderscout.preferences.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     public static String INTENT_FLAG_SHOWN_FRAGMENT = "SHOWN_FRAGMENT";
     public static int INTENT_FLAGS_HOME = 0;
@@ -63,7 +70,12 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fragment, fragment);
         ft.commit();
+
     }
+
+
+
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

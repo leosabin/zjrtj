@@ -39,7 +39,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
@@ -62,7 +61,7 @@
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
 
-                    <TextView
+                    <EditText
                         android:text="0:00:000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -94,74 +93,11 @@
                         android:text="Pause"
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
-                    <TextView
+                    <EditText
                         android:text="0:00:000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/shoothightimereturn" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="  Shoots Low"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startShootLow"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <Button
-                        android:id="@+id/pauseShootLow"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <TextView
-                        android:text="0:00:000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shootlowtimereturn" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="               Gear"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startGear"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-
-                    <Button
-                        android:id="@+id/pauseGear"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <TextView
-                        android:text="0:00:000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geartimereturn" />
 
                 </LinearLayout>
 
@@ -188,7 +124,7 @@
                         android:text="Pause"
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
-                    <TextView
+                    <EditText
                         android:text="0:00:000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -219,7 +155,7 @@
                         android:text="Pause"
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
-                    <TextView
+                    <EditText
                         android:text="0:00:000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -234,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="76dp"
                 android:textSize="18sp"
                 android:layout_weight="7.85"
                 android:layout_gravity="center">
@@ -398,195 +334,257 @@
 
         </LinearLayout>
 
-        <TextView
-            android:text="Low Dumps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/lowdumps"
-            android:layout_gravity="center"
-            android:textSize="24sp" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
-            <RadioGroup
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/dump1"
-                android:text="radio buttons">
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
-                <RadioButton
-                    android:text="1-15"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/dump1rb1"
-                    android:layout_weight="1" />
+                    android:id="@+id/dump1"
+                    android:text="radio buttons">
 
-                <RadioButton
-                    android:text="16-30"
+                    <RadioButton
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump1rb0"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="1-15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump1rb1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="16-30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump1rb2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="31-45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump1rb3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump1rb4"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/dump1rb2"
-                    android:layout_weight="1" />
+                    android:id="@+id/dump2"
+                    android:text="radio buttons">
 
-                <RadioButton
-                    android:text="31-45"
+                    <RadioButton
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump2rb0"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="1-15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump2rb1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="16-30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump2rb2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="31-45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump2rb3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump2rb4"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/dump1rb3"
-                    android:layout_weight="1" />
+                    android:id="@+id/dump3"
+                    android:text="radio buttons">
 
-                <RadioButton
-                    android:text="none"
+                    <RadioButton
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump3rb0"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="1-15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump3rb1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="16-30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump3rb2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="31-45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump3rb3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump3rb4"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/dump1rb4"
-                    android:layout_weight="1" />
+                    android:id="@+id/dump4"
+                    android:text="radio buttons">
 
-            </RadioGroup>
-            <RadioGroup
+                    <RadioButton
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump4rb0"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="1-15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump4rb1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="16-30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump4rb2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="31-45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump4rb3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump4rb4"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dump5"
+                    android:text="radio buttons">
+
+                    <RadioButton
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump5rb0"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="1-15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump5rb1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="16-30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump5rb2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="31-45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump5rb3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dump5rb4"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/dump2"
-                android:text="radio buttons">
+                android:orientation="vertical">
 
-                <RadioButton
-                    android:text="1-15"
+                <CheckBox
+                    android:id="@+id/cbalteredshot"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump2rb1"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="16-30"
+                    android:layout_height="50dp"
+                    android:text="Altered Shot" />
+                <CheckBox
+                    android:id="@+id/cbpreventedclimb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Prevented Climb" />
+                <CheckBox
+                    android:id="@+id/cbblockedpeg"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump2rb2"
-                    android:layout_weight="1" />
+                    android:text="Blocked Peg"
+                    android:layout_height="50dp" />
 
-                <RadioButton
-                    android:text="31-45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump2rb3"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="none"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump2rb4"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dump3"
-                android:text="radio buttons">
-
-                <RadioButton
-                    android:text="1-15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump3rb1"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="16-30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump3rb2"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="31-45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump3rb3"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="none"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump3rb4"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dump4"
-                android:text="radio buttons">
-
-                <RadioButton
-                    android:text="1-15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump4rb1"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="16-30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump4rb2"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="31-45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump4rb3"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="none"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump4rb4"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dump5"
-                android:text="radio buttons">
-
-                <RadioButton
-                    android:text="1-15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump5rb1"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="16-30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump5rb2"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="31-45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump5rb3"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="none"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump5rb4"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -597,6 +595,30 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/teleop_spinnerClimbingStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/climbing_stats_array" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="Climbing Stats"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -686,22 +708,6 @@
             android:layout_marginBottom="0dp"
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="Climbing Stats"
-                android:textSize="18sp" />
-
-            <Spinner
-                android:id="@+id/teleop_spinnerClimbingStats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:entries="@array/climbing_stats_array" />
 
         </LinearLayout>
 
